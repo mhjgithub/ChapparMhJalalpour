@@ -60,6 +60,12 @@
         <!--            <artifactId>mysql-connector-java</artifactId>-->
         <!--&lt;!&ndash;            <version>8.0.31</version>&ndash;&gt;-->
         <!--        </dependency>-->
+        <!-- __________ database in memory - database gui -->
+        <!--        <dependency>-->
+        <!--            <groupId>com.h2database</groupId>-->
+        <!--            <artifactId>h2</artifactId>-->
+        <!--            <scope>runtime</scope>-->
+        <!--        </dependency>-->
         <!-- ________________________ commons ________________________ -->
         <dependency>
             <groupId>commons-io</groupId>
@@ -73,12 +79,6 @@
             <artifactId>springfox-boot-starter</artifactId>
             <version>3.0.0</version>
         </dependency>
-        <!-- __________ database in memory - database gui ________________________ -->
-        <!--        <dependency>-->
-        <!--            <groupId>com.h2database</groupId>-->
-        <!--            <artifactId>h2</artifactId>-->
-        <!--            <scope>runtime</scope>-->
-        <!--        </dependency>-->
         <!-- ________________________ mapping-dto ________________________ -->
         <dependency>
             <groupId>org.mapstruct</groupId>
@@ -142,10 +142,12 @@
     <!-- ________________________ پلاگین‌ها ________________________ -->
     <build>
         <plugins>
-            <!-- ________________________ build __پیش فرض اسپرینگ___پلاگین‌هایی که در پروژه نیاز می‌شود ________________________ -->
+            <!-- ________________________  ________________________ -->
             <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
+<!--                <groupId>org.springframework.boot</groupId>-->
+<!--                <artifactId>spring-boot-maven-plugin</artifactId>-->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
             </plugin>
             <!-- ________________________ mapping-dto ________________________ -->
             <plugin>
